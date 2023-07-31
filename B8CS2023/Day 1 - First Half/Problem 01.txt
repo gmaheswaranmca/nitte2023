@@ -1,0 +1,44 @@
+Problem:
+for given N numbers,
+find single digit sum of digits.
+
+Test case
+Input
+3
+123 12346 786543012
+Ouput
+6 7  9
+- 
+
+6 16 36
+
+1. sod					- while loop
+2. single digit sod 	- do .. while loop 
+3. solve for n numbers  - for loop 
+
+
+
+int - unsinged - if 2 bytes wide - range is 0 to 65535
+int - singed - if 2 bytes wide - range is -37768 to 37767
+
+N = 37769 --> -37767
+[long/short] [unsigned/signed] int
+float 
+double
+char 
+enum
+struct/union 
+
+
+value / reference(pointer)
+
+
+
+
+
+
+
+
+
+
+
