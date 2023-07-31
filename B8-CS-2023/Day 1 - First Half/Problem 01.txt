@@ -22,6 +22,11 @@ int - unsinged - if 2 bytes wide - range is 0 to 65535
 int - singed - if 2 bytes wide - range is -37768 to 37767
 
 N = 37769 --> -37767
+if you assign "37769" into N (of type signed int) 
+and try to print N, you will get the output of "-37767",
+two times rotations happened.
+
+
 [long/short] [unsigned/signed] int
 float 
 double
@@ -31,14 +36,3 @@ struct/union
 
 
 value / reference(pointer)
-
-
-
-
-
-
-
-
-
-
-

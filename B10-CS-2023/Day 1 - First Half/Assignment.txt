@@ -1,0 +1,35 @@
+For the program 003-...
+define the below functions and 
+call them in the main function
+
+----------------------------------------
+define the function 
+void read_numbers(int N, unsigned long int numbers[])
+to have the following task code
+----------------------------------------
+for (int I = 0; I < N; I++)
+{
+	scanf("%ld", &numbers[I]);
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------
+void find_sod(int N, unsigned long int numbers[],
+                     unsigned long int sum[])
+to have the following task code					 
+----------------------------------------
+    for (int I = 0; I < N; I++)
+    {
+        sum[I] = single_digit_sod(numbers[I]);
+    }
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------
+void print_sod(int N, unsigned long int sum[])
+----------------------------------------
+    for (int I = 0; I < N; I++)
+    {
+        printf("%ld ", sum[I]);
+    }
+to have the following task code	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
