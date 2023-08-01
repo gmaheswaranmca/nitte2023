@@ -1,0 +1,62 @@
+notes:
+storage classes:
+
+1. auto (automatic)
+all local variables and arguments 
+of the function are auto variables.
+
+memory allocation for auto local variables in the stack/heap.
+
+life time is within the function.
+
+2. register
+local variable but memory allocatted in the cpu register depending upon availability of the register.
+
+if not available, memory may be allocatted in the stack. 
+
+life time is within the function.
+
+3. global variables
+all variables allocatted outside the functions are called global variables and will be used across all the modules of the application.
+
+life time is througout program process.
+
+extern qualifier will be used for global variable to inform the compiler to tell the variable will be memory allocatted not in the current module but in the different module or later.
+
+4. static variables / identifiers
+static variables / identifiers are private to the module.
+
+life time of the static storage class is throught the program process.
+
+
+
+... ... ... ... ... ...... ... ...... ... ...... ... ...... ... ...
+function 
+	recursion 
+		the function calls itself with base condition is called recursion 
+		
+		
+factorial
+	5! = 5 x 4 x 3 x 2 x 1
+	
+	5! = 5 * 4!
+	4! = 4 * 3!
+	3! = 3 * 2!
+	2! = 2 * 1!
+	1! = 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

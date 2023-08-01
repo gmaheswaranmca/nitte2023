@@ -1,0 +1,50 @@
+Storage Classes: (storage, life, scope/accessibility)
+
+variables:
+
+1. local variables
+	- variables declared inside the function 
+	auto - automatic : mem alloc at stack 
+			has address
+	register 		 : mem alloc at cpu register / at stack 
+			does not have address 
+	
+	life time : within the function 
+	access: within the function 
+
+2. global variables 
+	- variables declared outside the function 	
+	
+	private
+		qualified by using keyword static 
+		access is within the module (header+source files)
+		
+		Faculty.h
+			static void Create();
+		Faculty.c
+			static void Create(){}
+		Student.h
+			static void Create();
+		Student.c
+			static void Create(){}	
+			
+	public 
+		non-static 
+		
+		
+	use of extern: 
+		Login.h 
+			int isLoggedIn = 0;
+		Faculty.h
+			void AddFaculty();
+			extern int isLoggedIn;
+		Faculty.c
+			void AddFaculty(){
+				if(isLoggedIn){
+					printf("Redirect To Login Module");
+					return;
+				}
+				//Solve
+			}
+
+	

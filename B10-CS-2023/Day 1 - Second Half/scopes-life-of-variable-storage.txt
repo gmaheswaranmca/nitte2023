@@ -1,0 +1,61 @@
+Admin application of ARS
+
+Flight Management
+
+FlightManagement.h
+	void AddFlight(...);
+	void UpdateTicketPrice(...);
+	void DeleteFligt(...);
+	void FindFlightById(...);
+	void FindAll(...);
+	extern int is_logged_in;
+	
+FlightManagement.c	
+	void AddFlight(...){
+		if(!is_logged_in){
+			//raise error / inform user 
+		}
+		//solve
+	}
+	
+	static void Create(){}
+	static void Update(){}
+	
+Login.h
+	int is_logged_in = 0;
+	
+	
+	
+	
+RoomManagement.c	
+	void AddRoom(...){
+		if(!is_logged_in){
+			//raise error / inform user 
+		}
+		//solve
+	}
+	
+	static void Create(){}
+	static void Update(){}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
