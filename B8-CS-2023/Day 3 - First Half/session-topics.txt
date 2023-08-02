@@ -1,0 +1,50 @@
+Topic
+Sort the Array elements using Bubble Sort. 
+Discuss its efficiency. 
+
+
+String Handling
+	string/char/conversion functions
+
+Problems to be solved:
+1. sort integers based on bubble sort 
+2. sort names based on bubble sort 
+3. sort employees based on his/her salary
+5
+5 1 4 2 8
+Pass 1
+	[5]. 1. 4 2 8	swap
+	1 [5]. 4. 2 8   swap 
+	1  4 [5] 2 8    swap 
+	1 4 2 [5] 8     no swap 
+Pass 2 
+    [1] 4 2 5	 no swap 
+	 1 [4] 2 5   swap 
+	 1 2 [4] 5   no swap 
+Pass 3 
+	 [1] 2 4   no swap 
+	 1 [2] 4   no swap 
+	 
+pseudocode 
+M = N
+a = array of n items [5 1 4 2 8]
+
+do
+	isSwapped = false
+	for I = 0..M-2
+		if a[I] > a[I+1]
+			swap a[I] and a[I+1]
+			isSwapped = true 
+		end if 
+	end for
+	M--		
+while isSwapped 
+
+
+
+
+	 
+	 
+	 
+	
+

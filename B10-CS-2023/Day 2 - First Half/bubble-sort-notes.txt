@@ -1,0 +1,93 @@
+Bubble sort -- Wikipedia
+	Bubble sort, sometimes referred to as sinking sort, is 
+	a simple sorting algorithm 
+	that repeatedly steps through the input list element by element, 
+	comparing the current element with the one after it, 
+	swapping their values if needed.
+	
+Method: Exchanging
+Stable: Yes
+Class: Comparison sort	
+
+assume n - number of items being sorted 
+Worst-case performance: O(n^2) comparisons, O(n^2) swaps 
+Best-case performance: O(n) comparisons, O(1) swaps 
+Average performance: O(n^2) comparisons, O(n^2) swaps 
+ 
+
+Data: 5 1 4 2 8
+Pass
+1	  [5]. 1. 4 2 8   swap 			
+   -> 1 [5]. 4. 2 8	  swap 
+   -> 1 4 [5]. 2. 8   swap 
+   -> 1 4 2 [5]. 8.   no swap 
+   as swap we did for the pass, follow the similar step 
+   now last element is sorted in the taken list 
+2  -> [1]. 4. 2 5 	no swap 
+   -> 1 [4]. 2. 5   swap 
+   -> 1 2 [4]. 5.   no swap 
+   as swap we did for the pass, follow the similar step 
+   now last element is sorted in the taken list 
+3  [1]. 2. 4 no swap 
+   1 [2]. 4. no swap 
+   as no swap for entire pass, we stop here the process
+now the array is 1 2 4 5 8 which is sorted    
+
+M = N
+let a = array of N items[5 1 4 2 8]
+do  
+	isSwapped = false 
+	for I = 0 .. M-2
+		if a[I] > a[I+1]:
+			swap(a[I],a[I+1])
+			isSwapped = true 
+		end if 
+	end for 
+	M--
+while isSwapped 		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+psedocode:
+
+	M = N
+	do
+		isSwapped = false
+		for I 0..M-1
+			if a[I] > a[I+1]
+				swap 
+				isSwapped = true 
+			end if 
+		end for 
+		M--
+	while isSwapped 
+	
+	//now sorted 
+	
+c code:
+	//let us code 
+		
+   

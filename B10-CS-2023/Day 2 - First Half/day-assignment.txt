@@ -1,0 +1,4 @@
+Assignment for the day:
+
+1. Impliment strip() function (Go remove leading and trailing spaces and tabs) without using library functions.
+2. Implement stricmp() and strncpy() and strstr() and strtok() without using library functions

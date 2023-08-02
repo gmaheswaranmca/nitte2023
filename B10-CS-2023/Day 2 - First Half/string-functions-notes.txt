@@ -1,0 +1,113 @@
+cpluscplus   -- most used reference sites 
+
+cppreference -- official site for c & c++ standard
+
+<string.h>
+Functions
+	Copying:
+		memcpy	Copy block of memory (function)
+		memmove	Move block of memory (function)
+		strcpy	Copy string (function)
+			char * strcpy ( char * destination, const char * source );
+		strncpy	Copy characters from string (function)
+
+	Concatenation:
+		strcat	Concatenate strings (function)
+		strncat	Append characters from string (function) 
+			char * strncat ( char * destination, const char * source, size_t num );
+
+	Comparison:
+		memcmp	Compare two blocks of memory (function)
+		strcmp	Compare two strings (function)
+		strncmp	Compare characters of two strings (function)
+	Searching
+		strchr	Locate first occurrence of character in string
+			const char * strchr ( const char * str, int character );
+			char * strchr (       char * str, int character );
+		strrchr	Locate last occurrence of character in string
+		strtok	Split string into tokens
+		strstr	Locate substring
+		strtok	Split string into tokens
+			char * strtok ( char * str, const char * delimiters );
+			A sequence of calls to this function split str into tokens, which are sequences of contiguous characters separated by any of the characters that are part of delimiters.
+			
+	/* strtok example */
+	#include <stdio.h>
+	#include <string.h>
+
+	int main ()
+	{
+	  char str[] ="- This, a sample string.";
+	  char * pch;
+	  printf ("Splitting string \"%s\" into tokens:\n",str);
+	  pch = strtok (str," ,.-");
+	  while (pch != NULL)
+	  {
+		printf ("%s\n",pch);
+		pch = strtok (NULL, " ,.-");
+	  }
+	  return 0;
+	}			
+
+<ctype.h>
+isalnum	Check if character is alphanumeric (function)
+isalpha	Check if character is alphabetic (function)
+isblank	Check if character is blank (function)
+
+isdigit	Check if character is decimal digit (function)
+
+islower	Check if character is lowercase letter (function)
+isprint	Check if character is printable (function)
+
+isspace	Check if character is a white-space (function)
+isupper	Check if character is uppercase letter (function)
+isxdigit	Check if character is hexadecimal digit (function)		
+
+<stdlib.h>
+String conversion
+	atof	Convert string to double (function)
+	atoi	Convert string to integer (function)
+	atol	Convert string to long integer (function)
+	atoll	Convert string to long long integer (function)
+	strtod	Convert string to double (function)
+	strtof	Convert string to float (function)
+	strtol	Convert string to long integer (function)
+	strtold	Convert string to long double (function)
+	strtoll	Convert string to long long integer (function)
+	strtoul	Convert string to unsigned long integer (function)
+	strtoull	Convert string to unsigned long long integer (function
+
+Dynamic memory management
+	calloc	Allocate and zero-initialize array (function)
+		void* calloc (size_t num, size_t size);
+		Allocates a block of memory for an array of num elements, each of them size bytes long, and initializes all its bits to zero.
+
+	malloc	Allocate memory block (function)
+		void* malloc (size_t size);
+		The content of the newly allocated block of memory is not initialized, remaining with indeterminate values.
+
+	realloc	Reallocate memory block (function)
+		void* realloc (void* ptr, size_t size);
+	free	Deallocate memory block (function)
+		void free (void* ptr);
+
+	
+
+... ... ... ... ...
+string literal - sequence of chars ends with \0
+strlen(str) - returns number of characters in a string 
+strcat(first, second)	- concatenates "second" str chars to "first" str
+						  ie "first" = "first" + "second"
+strcpy(dest, source) - copies "source" str to "dest" str 
+							"dest" = "source"
+strcmp(first, second) - compares "first" with "second" 
+					  - 0 if "first" equals "second"
+					  - -ve number if "first" < "second"	
+					  - +ve number if "first" > "second"
+		strcmp("hello","hi") -> -ve number 
+		strcmp("hi", "hello") -> +ve number 	
+		strcmp("hello", "hello") -> 0
+		
+
+
+
