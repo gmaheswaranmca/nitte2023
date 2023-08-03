@@ -1,0 +1,19 @@
+pointers:
+    T a;
+	T* p = &a;
+	T** pp = &p;
+	
+	int a;
+	int* p = &a;
+	int** pp = &p;
+	
+	struct _emp_t{ char name[50]; float salary; };
+	typedef struct _emp_t emp_t;
+	
+	emp_t a;
+	strcpy(a.name,"Mahesh");
+	a.salary = 5000;
+	emp_t* p = &a;
+	printf("%s%f",p->name,p->salary);
+	emp_t** pp = &p;
+	
