@@ -3,6 +3,7 @@
 */
 #include<stdio.h>
 #include<string.h>
+
 void append(char* doc, char* W){
 	strcat(doc,W);
 	printf("[Editor:%s]\n",doc);
