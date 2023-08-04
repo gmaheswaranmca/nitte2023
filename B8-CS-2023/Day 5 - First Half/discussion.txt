@@ -1,0 +1,58 @@
+void doProcess(int num){
+}
+
+function pointer for doProcess 
+void (*ptrdoProcess)(int num)
+
+Assignment of the function to function pointer 
+ptrdoProcess = doProcess
+
+function call using functio pointer 
+(*ptrdoProcess)(10)
+
+
+------------------------------
+											value		addr				
+const int* ptr;   //pointer to constant 	  no         yes
+int const* ptr;   //pointer to constant 
+
+int* const ptr;   //constant pointer          yes        no 
+
+const int* const ptr;//constant pointer to constant      no   no 
+
+char* strcpy(char*,const char*)
+
+------------------------------
+
+
+#define		STR	"Hello %s"
+main()
+{
+	printf(STR, STR);
+}
+
+after substitution
+
+main()
+{
+	printf("Hello %s", "Hello %s");
+}
+
+
+Output:
+Hello Hello %s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
