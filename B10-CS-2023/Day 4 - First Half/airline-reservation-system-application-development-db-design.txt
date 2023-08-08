@@ -1,0 +1,147 @@
+Airline Reservation System:
+	admin app
+		flight management 
+			over security (login - authentication / authorization)
+	customer app 
+		customer registration 
+		customer login 
+			bookings - search flight 
+				source, destination, travel date
+				pick the flight 
+				fill the passenger details 
+				go for bookings 
+				
+-------------------------------------------------------
+	flight {flight_id, flight_number, airline_name, source, destination, 
+			travel_date, seats_capacity, ticket_fare}
+	admin {admin_id, username, password, role}
+	1-agent, 2-supervisor, 3-manager(super user}
+	
+	
+	customer {customer_id, name, gender, age, mobile_number, email_id, 
+			  username, password}
+	booking {booking_id, booking_number, booking_date, 
+		flight_id, customer_id, travel_date, number_of_passengers, bill_amount}
+	booking_passenger{booking_id, sno, passenger_name, age, id_card_details}
+		
+-------------------------------------------------------
+
+
+CREATE DATABASE ars_app;
+
+USE ars_app;
+
+CREATE TABLE flight(flight_id INT AUTO_INCREMENT,
+	flight_number VARCHAR(20) NOT NULL,
+	airline_name VARCHAR(255) NOT NULL,
+	source VARCHAR(255) NOT NULL,
+	destination VARCHAR(255) NOT NULL,
+	travel_date DATETIME NOT NULL,
+	seats_capacity int NOT NULL,
+	ticket_fare float NOT NULL,
+	CONSTRAINT pk_flight_flight_id PRIMARY KEY(flight_id));
+	
+CREATE TABLE admin(admin_id INT AUTO_INCREMENT,
+	username VARCHAR(50) NOT NULL,
+	password VARCHAR(50) NOT NULL,
+	role int NOT NULL DEFAULT 1 CHECK (role IN (1,2,3)),
+	CONSTRAINT pk_admin_admin_id PRIMARY KEY(admin_id),
+	CONSTRAINT uk_admin_username UNIQUE(username));
+
+INSERT INTO admin(username, password, role) VALUES('mahesh','1234',3);
+INSERT INTO admin(username, password, role) VALUES('ganguli','1234',2),
+	('dravid','1234',2),('rohit','1234',1),('sami','1234',1),('kohli','1234',1);
+
+INSERT INTO admin(username, password, role) VALUES('sachin','1234',1);
+
+UPDATE admin SET role=3 WHERE username='sachin';
+
+SELECT * FROM admin;
+
+SELECT * FROM admin WHERE username='sachin';
+
+SELECT * FROM admin WHERE username LIKE 's%'; -- starts with 
+SELECT * FROM admin WHERE username LIKE '%i'; -- ends with 
+SELECT * FROM admin WHERE username LIKE '%a%'; -- contains
+
+
+CREATE TABLE customer(customer_id INT AUTO_INCREMENT,
+	name VARCHAR(255) NOT NULL,
+	gender INT NOT NULL CHECK(gender BETWEEN 1 AND 3),
+	age INT NOT NULL CHECK(age BETWEEN 16 AND 120),
+	mobile_number VARCHAR(20) NOT NULL,
+	email_id VARCHAR(512) NOT NULL,
+	username VARCHAR(50) NOT NULL,
+	password VARCHAR(50) NOT NULL,
+	CONSTRAINT pk_customer_customer_id PRIMARY KEY(customer_id),
+	CONSTRAINT uk_customer_mobile_number UNIQUE(mobile_number),
+	CONSTRAINT uk_customer_email_id UNIQUE(email_id),
+	CONSTRAINT uk_customer_username UNIQUE(username));
+
+CREATE TABLE booking (
+	booking_id BIGINT AUTO_INCREMENT, 
+	booking_number VARCHAR(20) NOT NULL, 
+	booking_date DATETIME NOT NULL, 
+	flight_id INT NOT NULL, 
+	customer_id INT NOT NULL, travel_date DATETIME NOT NULL, 
+	number_of_passengers INT NOT NULL, bill_amount FLOAT NOT NULL,
+	CONSTRAINT pk_booking_booking_id PRIMARY KEY(booking_id),
+	CONSTRAINT fk_booking_flight_flight_id FOREIGN KEY(flight_id) 
+					REFERENCES flight(flight_id),
+	CONSTRAINT fk_booking_customer_customer_id FOREIGN KEY(customer_id)
+					REFERENCES customer(customer_id)
+					);
+					
+					
+					
+CREATE TABLE booking_passenger(booking_id BIGINT NOT NULL, 
+	sno INT NOT NULL, 
+	passenger_name VARCHAR(512) NOT NULL, age INT NOT NULL, 
+	id_card_details VARCHAR(512),
+	CONSTRAINT pk_booking_passenger_booking_id_sno PRIMARY KEY(booking_id, sno),
+	CONSTRAINT fk_booking_passenger_booking_booking_id FOREIGN KEY(booking_id) 
+					REFERENCES booking(booking_id)
+					);
+						
+	
+	
+	
+
+
+
+
+
+	
+	
+-- DROP TABLE flight;	
+-- DROP TABLE admin;	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
