@@ -1,5 +1,5 @@
 import pymysql
-from .flight import Flight
+from flight import Flight
 class FlightService:
     def DbConnect(self):
         con = pymysql.connect(host = "localhost",
