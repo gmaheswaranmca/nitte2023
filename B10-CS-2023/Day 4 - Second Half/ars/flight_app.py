@@ -36,7 +36,7 @@ class FlightManagement:
         con = self.DbConnect()
         cur = con.cursor()
         sql = """SELECT * FROM flight WHERE flight_number=%s"""
-        params = (flight_number,)
+        params = (flight_number,)#tuple
         cur.execute(sql, params)
         flight = cur.fetchone()
 
