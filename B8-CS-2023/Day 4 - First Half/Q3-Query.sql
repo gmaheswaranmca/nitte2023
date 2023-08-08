@@ -1,0 +1,1 @@
+SELECT SUBSTR(TO_DATE('01-02-2018','mm-dd-yyyy'),4,3) || '-' || 2018 FROM DUAL

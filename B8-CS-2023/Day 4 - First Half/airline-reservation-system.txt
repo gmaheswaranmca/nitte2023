@@ -1,0 +1,28 @@
+Airline Reservation System:
+	admin app
+		flight management 
+			over security (login - authentication / authorization)
+	customer app 
+		customer registration 
+		customer login 
+			bookings - search flight 
+				source, destination, travel date
+				pick the flight 
+				fill the passenger details 
+				go for bookings 
+				
+-------------------------------------------------------
+	flight {flight_id, flight_number, airline_name, source, destination, 
+			travel_date, seats_capacity, ticket_fare}
+	admin {admin_id, username, password, role}
+	1-agent, 2-supervisor, 3-manager(super user}
+	
+	
+	customer {customer_id, name, gender, age, mobile_number, email_id, 
+			  username, password}
+	booking {booking_id, booking_number, booking_date, 
+		flight_id, customer_id, travel_date, number_of_passengers, bill_amount}
+	booking_passenger{booking_id, sno, passenger_name, age, id_card_details}
+		
+-------------------------------------------------------
+
