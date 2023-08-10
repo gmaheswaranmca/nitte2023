@@ -5,11 +5,5 @@ con = pymysql.connect(host = "localhost",
                      database="ars_app",
                      user = "root",
                      password="")
-cur = con.cursor()
-sql_stmt = """SELECT * FROM flight
-"""  
-cur.execute(sql_stmt)  
-flights = cur.fetchall()
-print(flights)
-con.commit()                 
+print("Connected....")              
 con.close()                    
